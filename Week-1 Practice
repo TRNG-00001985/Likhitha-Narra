@@ -1,0 +1,196 @@
+//even or odd using bitwise
+public class Main {
+	public static void main(String args[])
+	{
+	int n=10;
+	if((n & 1)==0)
+	{
+		System.out.print(n+" is even");
+	}
+	else if((n & 1)==1)
+	{
+		System.out.print(n+" is odd");
+	}
+	}
+
+}
+
+//Swap numbers using bitwise
+public class Second {
+	public static void main(String args[])
+	{
+	int a=10;
+	int b=5;
+	a=a^b;
+	b=a^b;
+	a=a^b;
+	System.out.print(a+" "+b);
+	
+	}
+
+}
+
+// Octal to Hexa 
+import java.util.*;
+class A3
+
+{
+	public static void main(String args[])
+	{
+		Scanner sc=new Scanner(System.in);
+		String octa=sc.next();
+		int dec=Integer.parseInt(octa,8);
+		String hexa=Integer.toHexString(dec);
+		System.out.print(hexa);
+	}
+}
+
+//Hexa to Octal
+import java.util.*;
+class A4
+
+{
+	public static void main(String args[])
+	{
+		Scanner sc=new Scanner(System.in);
+		String hexa=sc.next();
+		int dec=Integer.parseInt(hexa,16);
+		String octa=Integer.toOctalString(dec);
+		System.out.print(octa);
+	}
+}
+
+//FIZZBIZZ
+
+import java.util.*;
+class A5
+{
+	public static void main(String args[])
+	{
+		Scanner sc=new Scanner(System.in);
+		int a=sc.nextInt();
+		int b=sc.nextInt();
+		for(int i=a;i<=b;i++)
+		{
+			if(i%3==0)
+			{
+				if(i%5==0)
+				{
+					System.out.print("FIZZBIZZ"+" ");
+				}
+				else
+				{
+					System.out.print("FIZZ"+" ");
+				}
+			}
+			else if(i%5==0)
+				
+			{
+				System.out.print("BIZZ"+" ");
+			}
+			else
+			{
+				System.out.print(i+" ");
+			}
+		}
+	}
+}
+
+
+//LEAP YEAR
+import java.util.*;
+class A6
+{
+	public static void main(String args[])
+	{
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		if((n%4==0)&&(n%100!=0 || n%400==0))
+		{
+			System.out.print("Leap Year");
+		}
+		else
+		{
+			System.out.print("Not a leap year");
+		}
+	}
+}
+		//PRIME OR COMPOSITE
+import java.util.*;
+class A7
+{
+	public static void main(String args[])
+	{
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int i,fc=0;
+		if(n==1)
+		{
+			System.out.print("Neither Prime nor Composite");
+		}
+		else
+		{
+		int sq=(int)Math.sqrt(n);
+		for(i=2;i<=sq;i++)
+		{
+			if(n%i==0)
+			{
+				fc++;
+				break;
+			}
+		}
+		if(fc==0)
+		{
+			System.out.print("Prime");
+		}
+		else
+		{
+			System.out.print("Not Prime");
+		}
+		
+	}
+	}
+}
+		//LCM
+import java.util.*;
+class A8
+{
+	public static void main(String args[])
+	{
+		Scanner sc=new Scanner(System.in);
+		int a=sc.nextInt();
+		int b=sc.nextInt();
+		int k=Math.max(a,b);
+		for(int i=k;;i++)
+		{
+			if(i%a==0 && i%b==0)
+			{
+				System.out.print(i);
+				break;
+			}
+		}
+	}
+}
+		//GCD
+import java.util.*;
+class A9
+
+{
+	public static void main(String args[])
+	{
+		Scanner sc=new Scanner(System.in);
+		int a=sc.nextInt();
+		int b=sc.nextInt();
+		int k=Math.min(a,b);
+		for(int i=k;i>=1;i--)
+		{
+			if(a%i==0 && b%i==0)
+			{
+				System.out.print(i);
+				break;
+			}
+		}
+	}
+}
+		
+		
