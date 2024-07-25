@@ -192,5 +192,865 @@ class A9
 		}
 	}
 }
+
+
+//Combine Strings
+
+import java.util.*;
+class A10
+
+{
+	public static void main(String args[])
+	{
+		Scanner sc=new Scanner(System.in);
+		String a=sc.next();
+		String b=sc.next();
+		StringBuilder sb=new StringBuilder();
+		sb.append(a);
+		sb.append(" ");
+		sb.append(b);
+
+		System.out.print(sb.toString());
+	}
+}
+
+
+//Greater Or Lesser for 3 numbers
+import java.util.*;
+class A11
+
+{
+	public static void main(String args[])
+	{
+		Scanner sc=new Scanner(System.in);
+		int a=sc.nextInt();
+		int b=sc.nextInt();
+		int c=sc.nextInt();
+		if(a>b && a>c)
+		{
+			System.out.print(a+" is bigger");
+		}
+		else if(b>c && b>a)
+		{
+			System.out.print(b+" is bigger");
+		}
+		else
+		{
+			System.out.print(c+" is bigger");
+
+
+//Array Sum
+
+import java.util.*;
+class A13
+
+{
+	public static void main(String args[])
+	{
+		Scanner sc=new Scanner(System.in);
+		int a[]=new int [5];
+		int sum=0;
+		for(int i=0;i<a.length;i++)
+		{
+			a[i]=sc.nextInt();
+		}
+		for(int i=0;i<a.length;i++)
+		{
+			sum=sum+a[i];
+		}
+		float avg=(float)sum/a.length;
+		System.out.print("The average of numbers are: "+avg);
+	}
+}
+
+// Array Sum
+
+
+import java.util.*;
+class A14
+
+{
+	public static void main(String args[])
+	{
+		Scanner sc=new Scanner(System.in);
+		int a[]=new int [5];
+		int sum=0;
+		for(int i=0;i<a.length;i++)
+		{
+			a[i]=sc.nextInt();
+		}
+		for(int i=0;i<a.length;i++)
+		{
+			sum=sum+a[i];
+		}
 		
+		System.out.print("The sum of numbers are: "+sum);
+	}
+}
+
+
+// GetMax and GetMin
+
+import java.util.*;
+class A15
+
+{
+	public static void main(String args[])
+	{
+		Scanner sc=new Scanner(System.in);
+		int a[]=new int [5];
+		int min=Integer.MAX_VALUE;
+		int max=Integer.MIN_VALUE;
+		for(int i=0;i<a.length;i++)
+		{
+			a[i]=sc.nextInt();
+		}
+		for(int i=0;i<a.length;i++)
+		{
+			if(a[i]>max)
+			{
+				max=a[i];
+			}
+			 if(a[i]<min)
+				min=a[i];
+			
+		}
+		System.out.print("The max and min of a array are: "+max+" "+min);
+	}
+}
+
+//Contains
+
+import java.util.*;
+class A16
+{
+	public static void main(String arggs[])
+	{
+		Scanner sc=new Scanner(System.in);
+		String a=sc.next();
+		char s=sc.next().charAt(0);
+		Boolean Found=false;
+		for(int i=0;i<a.length();i++)
+		{
+			char A=a.charAt(i);
+			if (A==s)
+			{
+			
+				Found=true;
+			}
+
+
+		}
+		if(Found)
+			System.out.print("true");
+		else
+			System.out.print("false");
+	}
+
+		
+}
+
+
+//Does Not Contain
+
+
+//Contains
+
+import java.util.*;
+class A17
+{
+	public static void main(String arggs[])
+	{
+		Scanner sc=new Scanner(System.in);
+		String a=sc.next();
+		char s=sc.next().charAt(0);
+		Boolean Found=false;
+		for(int i=0;i<a.length();i++)
+		{
+			char A=a.charAt(i);
+			if (A==s)
+			{
+			
+				Found=true;
+			}
+
+
+		}
+		if(Found==false)
+			System.out.print("true");
+		else
+			System.out.print("false");
+	}
+
+		
+}
+
+
+//Arrays Are Equal
+
+import java.util.*;
+class A18
+{
+	public static void main(String arggs[])
+		{
+			Scanner sc=new Scanner(System.in);
+			int a[]=new int[5];
+			int b[]=new int[5];
+			Boolean flag=false;
+			for(int i=0;i<a.length;i++)
+			{
+				a[i]=sc.nextInt();
+			}
+			for(int i=0;i<b.length;i++)
+			{
+				b[i]=sc.nextInt();
+			}
+			for(int i=0;i<a.length;i++)
+			{
+				if(a[i]!=b[i])
+				{
+					flag=true;
+					break;
+				}
+			}
+			if(!flag)
+				System.out.print("Arrays are equal");
+			else
+				System.out.print("Arrays are not equal");
+	}
+}
+				
+
+			//Max Minus Min
+
+import java.util.*;
+class A19
+{
+	public static void main(String arggs[])
+		{
+			Scanner sc=new Scanner(System.in);
+			int a[]=new int[5];
+			for(int i=0;i<a.length;i++)
+			{
+				a[i]=sc.nextInt();
+			}
+			int min=Integer.MAX_VALUE;
+			int max=Integer.MIN_VALUE;
+			for(int i=0;i<a.length;i++)
+			{
+				if(a[i]<min)
+					min=a[i];
+				
+				if(a[i]>max)
+					max=a[i];
+
+			}
+			int diff=max-min;
+			System.out.print("The difference is : "+diff);
+	}
+}
+
+
+//Max Minus Min
+
+import java.util.*;
+class A19
+{
+	public static void main(String arggs[])
+		{
+			Scanner sc=new Scanner(System.in);
+			int a[]=new int[5];
+			for(int i=0;i<a.length;i++)
+			{
+				a[i]=sc.nextInt();
+			}
+			int min=Integer.MAX_VALUE;
+			int max=Integer.MIN_VALUE;
+			for(int i=0;i<a.length;i++)
+			{
+				if(a[i]<min)
+					min=a[i];
+				
+				if(a[i]>max)
+					max=a[i];
+
+			}
+			int diff=max-min;
+			System.out.print("The difference is : "+diff);
+	}
+}
+
+
+//IndexOf
+
+import java.util.*;
+class A21
+{
+	public static void main(String arggs[])
+		{
+			Scanner sc=new Scanner(System.in);
+			int a[]=new int[5];
+			int i,x=10;
+			for(i=0;i<a.length;i++)
+			{
+				a[i]=sc.nextInt();
+			}
+			for( i=0;i<a.length;i++)
+			{
+				if(x==a[i])
+				{
+					System.out.print("The index of the value is: "+i);
+					break;
+				}
+			}
+			
+	}
+}
+
+//IndexOf
+
+
+import java.util.*;
+class A22
+{
+	public static void main(String arggs[])
+		{
+			Scanner sc=new Scanner(System.in);
+			String a=sc.nextLine();
+			System.out.println(a.indexOf("a"));
+			System.out.println(a.length());
+			System.out.println(a.toUpperCase());
+			System.out.println(a.toLowerCase());
+			System.out.println(a.lastIndexOf("i"));
+			System.out.println(a.replace("a","l"));
+			System.out.println(a.replaceAll("i","m"));
+			System.out.println(a.replaceFirst("i","z"));
+			System.out.println(a.startsWith("a"));
+			System.out.println(a.endsWith("a"));
+			System.out.println(a.compareTo("Likki"));
+			System.out.println(a.compareToIgnoreCase("Likki"));
+			System.out.println(a.equalsIgnoreCase("Likki"));
+			System.out.println(a.trim());
+			System.out.println(Arrays.toString(a.split(",")));
+			System.out.println(a.substring(1,2));
+		}
+}
+//Is Sorted
+
+
+import java.util.*;
+class A23
+{
+	public static void main(String arggs[])
+	{
+			Scanner sc=new Scanner(System.in);
+			int a[]=new int[5];
+			for(int i=0;i<a.length;i++)
+			{
+				a[i]=sc.nextInt();
+			}
+			if(isSortedASC(a))
+			{
+				System.out.print("The elements are in sorted ascending order");
+			}
+			else if(isSortedDESC(a))
+			{
+				System.out.print("The elements are in sorted descending order");
+			}
+			else
+			{
+				System.out.print("The elements are not in sorted ascendind or descending order");
+			}
+	}
+	
+			public static boolean isSortedASC(int[] a)
+			{
+			for(int i=0;i<a.length-1;i++)
+			{
+				if(a[i]>a[i+1])
+				{
+					return false;
+				}
+
+
+			}
+			return true;
+			}
+
+			public static boolean isSortedDESC(int[] a)
+			{
+			for(int i=0;i<a.length-1;i++)
+			{
+				if(a[i]<a[i+1])
+				{
+					return false;
+				}
+
+
+			}
+			return true;
+			}
+	
+}
+//Right Pyramid
+
+
+import java.util.*;
+class A24	
+{
+	public static void main(String arggs[])
+	{
+			Scanner sc=new Scanner(System.in);
+			int n=sc.nextInt();
+			for(int i=1;i<=n;i++)
+			{
+				for(int j=1;j<=i;j++)
+				{
+					System.out.print(" *");
+				}
+				System.out.println();
+			}
+	}
+}
+		
+		}
+	}
+}
+// Contains Duplicates
+
+import java.util.Arrays;
+
+public class A25 {
+
+
+    public static boolean containsDuplicates(int[] array) {
+        Arrays.sort(array);  
+        for (int i = 0; i < array.length - 1; i++) {
+            if (array[i] == array[i + 1]) {
+                return true;  
+            }
+        }
+        return false;  // No duplicates found
+    }
+
+    public static void main(String[] args) {
+        int[] exampleArray = {1, 2, 3, 4, 5, 5,2};
+        System.out.println(containsDuplicates(exampleArray)); 
+    }
+}
+
+// Search2DArray
+
+public class A26 {
+
+    public static boolean search2DArray(int[][] array, int target) {
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array[i].length; j++) {
+                if (array[i][j] == target) {
+                    return true;  
+                }
+            }
+        }
+        return false;  
+    }
+
+    public static void main(String[] args) {
+        int[][] exampleArray = {
+            {1, 2, 3},
+            {4, 5, 6},
+            {7, 8, 9}
+        };
+        int target = 5;
+
+        boolean result = search2DArray(exampleArray, target);
+        System.out.println("Element found: " + result);  
+    }
+}
+
+
+//CombineArrays
+
+import java.util.Arrays;
+
+public class A27{
+
+    public static String[] combineArrays(String[] array1, String[] array2) {
+        int length1 = array1.length;
+        int length2 = array2.length;
+        String[] result = new String[length1 + length2];
+
+        System.arraycopy(array1, 0, result, 0, length1);
+        System.arraycopy(array2, 0, result, length1, length2);
+
+        return result;
+    }
+
+    public static void main(String[] args) {
+        String[] array1 = {"a", "b", "c"};
+        String[] array2 = {"d", "e", "f"};
+
+        String[] combinedArray = combineArrays(array1, array2);
+        System.out.println(Arrays.toString(combinedArray)); //WordCount
+
+import java.util.Arrays;
+import java.util.*;
+
+public class A28 {
+
+  
+    public static void wordCount(String input) {
+               input = input.replaceAll("[^a-zA-Z0-9\\s]", "").toLowerCase();
+
+        
+        String[] words = input.split("\\s+");
+
+        
+        String[] uniqueWords = new String[words.length];
+        int[] counts = new int[words.length];
+        int uniqueCount = 0;
+
+        for (String word : words) {
+            boolean found = false;
+            for (int i = 0; i < uniqueCount; i++) {
+                if (uniqueWords[i].equals(word)) {
+                    counts[i]++;
+                    found = true;
+                    break;
+                }
+            }
+            if (!found) {
+                uniqueWords[uniqueCount] = word;
+                counts[uniqueCount] = 1;
+                uniqueCount++;
+            }
+        }
+
+       
+        for (int i = 0; i < uniqueCount; i++) {
+            System.out.println(uniqueWords[i] + ": " + counts[i]);
+        }
+    }
+
+    public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+        String input = sc.nextLine();
+        wordCount(input);
+    }
+}
+//ReverseAStringpublic
+
+import java.util.*; 
+class A29 {
+
+  
+    public static String reverseString(String input) {
+        
+        StringBuilder sb = new StringBuilder(input);
+        
+        sb.reverse();
+  
+        return sb.toString();
+    }
+
+    public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+        String input = sc.nextLine();
+        String reversed = reverseString(input);
+        System.out.println("Reversed String: " + reversed);  // Output: !dlrow ,olleH
+    }
+}
+
+
+//MostCommonCharacter
+
+public class A30{
+
+
+    public static char mostCommonCharacter(String input) {
+       
+        int[] charCounts = new int[256];
+
+      
+        for (char c : input.toCharArray()) {
+            charCounts[c]++;
+        }
+
+        
+        char mostCommonChar = '\0';  
+        int maxCount = 0;
+
+        for (int i = 0; i < charCounts.length; i++) {
+            if (charCounts[i] > maxCount) {
+                mostCommonChar = (char) i;
+                maxCount = charCounts[i];
+            }
+        }
+
+        return mostCommonChar;
+    }
+
+    public static void main(String[] args) {
+        String input = "hello world";
+        char mostCommon = mostCommonCharacter(input);
+        System.out.println("Most common character: " + mostCommon);  
+    }
+}
+//Fibonacci
+public class A31 {
+
+
+    public static int fibonacci(int n) {
+        if (n <= 1) {
+            return n;
+        }
+
+        int a = 0;
+        int b = 1;
+        int fib = 0;
+
+        for (int i = 2; i <= n; i++) {
+            fib = a + b;
+            a = b;
+            b = fib;
+        }
+
+        return fib;
+    }
+
+    public static void main(String[] args) {
+        int n = 10; 
+        System.out.println("Fibonacci number at position " + n + " is " + fibonacci(n));
+    }
+}
+//StringIsPalindrome
+
+public class A32 {
+
+    // Method to check if a string is a palindrome using StringBuilder
+    public static boolean isPalindrome(String input) {
+        StringBuilder sb = new StringBuilder(input);
+        String reversed = sb.reverse().toString();
+        return input.equals(reversed);
+    }
+
+    public static void main(String[] args) {
+        String input = "radar"; 
+        System.out.println("Is the string \"" + input + "\" a palindrome? " + isPalindrome(input));
+    }
+}
+
+
+    }
+}
+
+//SubArray
+
+import java.util.Arrays;
+
+public class A35 {
+
+   
+    public static int[] getSubArray(int[] array, int start, int end) {
+      
+        if (start < 0 || end >= array.length || start > end) {
+            throw new IllegalArgumentException("Invalid start or end index.");
+        }
+     
+        return Arrays.copyOfRange(array, start, end + 1);
+    }
+
+    public static void main(String[] args) {
+        int[] array = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+        int start = 2;
+        int end = 5;
+        int[] subArray = getSubArray(array, start, end);
+        System.out.println("Subarray: " + Arrays.toString(subArray));
+    }
+}
+//Matrix Addition
+
+public class A34 {
+
+   
+    public static int[][] addMatrices(int[][] matrix1, int[][] matrix2) {
+        int rows = matrix1.length;
+        int cols = matrix1[0].length;
+
+
+        if (matrix2.length != rows || matrix2[0].length != cols) {
+            throw new IllegalArgumentException("Matrices must have the same dimensions.");
+        }
+
+        int[][] result = new int[rows][cols];
+
+     
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                result[i][j] = matrix1[i][j] + matrix2[i][j];
+            }
+        }
+
+        return result;
+    }
+    public static void printMatrix(int[][] matrix) {
+        for (int[] row : matrix) {
+            for (int value : row) {
+                System.out.print(value + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void main(String[] args) {
+        int[][] matrix1 = {
+            {1, 2, 3},
+            {4, 5, 6},
+            {7, 8, 9}
+        };
+
+        int[][] matrix2 = {
+            {9, 8, 7},
+            {6, 5, 4},
+            {3, 2, 1}
+        };
+
+        int[][] result = addMatrices(matrix1, matrix2);
+
+        System.out.println("Resulting Matrix after Addition:");
+        printMatrix(result);
+    }
+}
+
+//Matrix Multiplication
+
+public class A36 {
+
+    // Method to multiply two matrices
+    public static int[][] multiplyMatrices(int[][] matrix1, int[][] matrix2) {
+        int rows1 = matrix1.length;
+        int cols1 = matrix1[0].length;
+        int rows2 = matrix2.length;
+        int cols2 = matrix2[0].length;
+
+       
+        if (cols1 != rows2) {
+            throw new IllegalArgumentException("Number of columns in matrix1 must be equal to number of rows in matrix2.");
+        }
+
+        int[][] result = new int[rows1][cols2];
+
+       
+        for (int i = 0; i < rows1; i++) {
+            for (int j = 0; j < cols2; j++) {
+                result[i][j] = 0;
+                for (int k = 0; k < cols1; k++) {
+                    result[i][j] += matrix1[i][k] * matrix2[k][j];
+                }
+            }
+        }
+
+        return result;
+    }
+
+    // Method to print a matrix
+    public static void printMatrix(int[][] matrix) {
+        for (int[] row : matrix) {
+            for (int value : row) {
+                System.out.print(value + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void main(String[] args) {
+        int[][] matrix1 = {
+            {1, 2, 3},
+            {4, 5, 6}
+        };
+
+        int[][] matrix2 = {
+            {7, 8},
+            {9, 10},
+            {11, 12}
+        };
+
+        int[][] result = multiplyMatrices(matrix1, matrix2);
+
+        System.out.println("Resulting Matrix after Multiplication:");
+        printMatrix(result);
+    }
+}
+
+//Transpose of a Matrix
+
+public classA37 {
+
+    
+    public static int[][] transposeMatrix(int[][] matrix) {
+        int rows = matrix.length;
+        int cols = matrix[0].length;
+
+    
+        int[][] transposed = new int[cols][rows];
+
+    
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                transposed[j][i] = matrix[i][j];
+            }
+        }
+
+        return transposed;
+    }
+
+    // Method to print a matrix
+    public static void printMatrix(int[][] matrix) {
+        for (int[] row : matrix) {
+            for (int value : row) {
+                System.out.print(value + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void main(String[] args) {
+        int[][] matrix = {
+            {1, 2, 3},
+            {4, 5, 6},
+            {7, 8, 9}
+        };
+
+        int[][] transposed = transposeMatrix(matrix);
+
+        System.out.println("Original Matrix:");
+        printMatrix(matrix);
+
+        System.out.println("Transposed Matrix:");
+        printMatrix(transposed);
+    }
+}
+
+//Sum of Digits of a number
+
+public class A38{
+
+
+    public static int sumOfDigits(int number) {
+        int sum = 0;
+        number = Math.abs(number); 
+        
+        while (number > 0) {
+            sum += number % 10;  
+            number /= 10;        
+        }
+        
+        return sum;
+    }
+
+    public static void main(String[] args) {
+        int number = 12345;  // Change this value to test different numbers
+        System.out.println("Sum of digits of " + number + " is " + sumOfDigits(number));
+    }
+}
+
 		
