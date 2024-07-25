@@ -1,0 +1,604 @@
+//Interface
+
+
+interface Shape {
+    double area();  
+class Rectangle implements Shape {
+    private double width;
+    private double height;
+
+   
+    public Rectangle(double width, double height) {
+        this.width = width;
+        this.height = height;
+    }
+
+   
+    @Override
+    public double area() {
+        return width * height;
+    }
+}
+
+
+class Circle implements Shape {
+    private double radius;
+
+
+    public Circle(double radius) {
+        this.radius = radius;
+    }
+
+    
+    @Override
+    public double area() {
+        return Math.PI * radius * radius;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+       
+        Shape rectangle = new Rectangle(5, 10);
+        Shape circle = new Circle(7);
+
+
+        System.out.println("Area of the rectangle: " + rectangle.area());
+        System.out.println("Area of the circle: " + circle.area());
+    }
+}
+
+
+//Acess Modifiers
+
+
+public class AccessModifiersDemo {
+    
+    // Public variable
+    public int publicVar = 1;
+    
+    // Protected variable
+    protected int protectedVar = 2;
+    
+    // Default variable (no modifier)
+    int defaultVar = 3;
+    
+    // Private variable
+    private int privateVar = 4;
+    
+    // Public method
+    public void display() {
+        System.out.println("Public method");
+        System.out.println("Public variable: " + publicVar);
+        System.out.println("Protected variable: " + protectedVar);
+        System.out.println("Default variable: " + defaultVar);
+        System.out.println("Private variable: " + privateVar);
+    }
+    
+    // Protected method
+    protected void protectedMethod() {
+        System.out.println("Protected method");
+    }
+    
+    // Default method (no modifier)
+    void defaultMethod() {
+        System.out.println("Default method");
+    }
+    
+    // Private method
+    private void privateMethod() {
+        System.out.println("Private method");
+    }
+    
+    // Nested class to demonstrate access modifiers
+    public static class NestedClass {
+        public void showAccess() {
+            AccessModifiersDemo demo = new AccessModifiersDemo();
+            System.out.println("Access from NestedClass:");
+            System.out.println("Public variable: " + demo.publicVar);
+            System.out.println("Protected variable: " + demo.protectedVar);
+            System.out.println("Default variable: " + demo.defaultVar);
+            System.out.println("Private variable: " + demo.privateVar); // This line will cause an error
+            
+            demo.display();  // Can access public, protected, and default methods
+            // demo.privateMethod(); // This line will cause an error
+        }
+    }
+    
+    public static void main(String[] args) {
+        AccessModifiersDemo demo = new AccessModifiersDemo();
+        demo.display();
+        demo.protectedMethod();
+        demo.defaultMethod();
+        // demo.privateMethod(); // Cannot access private method outside the class
+        
+        NestedClass nested = new NestedClass();
+        nested.showAccess();
+    }
+}
+
+
+//Abstract class
+
+abstract class Shape {
+   
+    abstract double area();
+
+   
+    void printDescription() {
+        System.out.println("This is a shape.");
+    }
+}
+
+
+class Rectangle extends Shape {
+    private double width;
+    private double height;
+
+    public Rectangle(double width, double height) {
+        this.width = width;
+        this.height = height;
+    }
+
+
+    @Override
+    double area() {
+        return width * height;
+    }
+}
+
+
+class Circle extends Shape {
+    private double radius;
+
+    // Constructor
+    public Circle(double radius) {
+        this.radius = radius;
+    }
+
+    // Implement the abstract method from Shape
+    @Override
+    double area() {
+        return Math.PI * radius * radius;
+    }
+}
+
+// Main class to demonstrate the use of Shape and its subclasses
+public class shapes {
+    public static void main(String[] args) {
+        // Create instances of Rectangle and Circle
+        Shape rectangle = new Rectangle(5, 10);
+        Shape circle = new Circle(7);
+
+        // Print descriptions and areas of the shapes
+        rectangle.printDescription();
+        System.out.println("Area of the rectangle: " + rectangle.area());
+
+        circle.printDescription();
+        System.out.println("Area of the circle: " + circle.area());
+    }
+}
+
+//This and super keywords
+
+
+
+// Parent class
+class Parent {
+    // Field of the Parent class
+    String name;
+
+    // Constructor of the Parent class
+    public Parent(String name) {
+        this.name = name;
+    }
+
+    // Method to display the name
+    public void display() {
+        System.out.println("Parent name: " + name);
+    }
+}
+
+// Child class that extends Parent
+class Child extends Parent {
+    // Field of the Child class
+    String name;
+
+    // Constructor of the Child class
+    public Child(String parentName, String childName) {
+        // Call the constructor of the Parent class
+        super(parentName);
+        this.name = childName;
+    }
+
+    // Method to display the names
+    @Override
+    public void display() {
+        // Call the display method of the Parent class
+        super.display();
+        System.out.println("Child name: " + this.name);
+    }
+}
+
+// Main class to demonstrate the use of this and super keywords
+public class ThisAndSuperDemo {
+    public static void main(String[] args) {
+        // Create an instance of the Child class
+        Child child = new Child("John", "Alice");
+
+        // Call the display method
+        child.display();
+    }
+}
+//Packages
+
+
+package shape;
+
+// Define the Shape class in the same file for demonstration
+abstract class Shape {
+    // Abstract method (does not have a body)
+    public abstract double area();
+
+    // Concrete method
+    public void printDescription() {
+        System.out.println("This is a shape.");
+    }
+}
+
+// Define the Rectangle class in the same file
+class Rectangle extends Shape {
+    private double width;
+    private double height;
+
+    // Constructor
+    public Rectangle(double width, double height) {
+        this.width = width;
+        this.height = height;
+    }
+
+    // Implement the abstract method from Shape
+    @Override
+    public double area() {
+        return width * height;
+    }
+}
+
+// Define the Circle class in the same file
+class Circle extends Shape {
+    private double radius;
+
+    // Constructor
+    public Circle(double radius) {
+        this.radius = radius;
+    }
+
+    // Implement the abstract method from Shape
+    @Override
+    public double area() {
+        return Math.PI * radius * radius;
+    }
+}
+
+// Main class to demonstrate the use of Shape and its subclasses
+public class Main {
+    public static void main(String[] args) {
+        // Create instances of Rectangle and Circle
+        Shape rectangle = new Rectangle(5, 10);
+        Shape circle = new Circle(7);
+
+        // Print descriptions and areas of the shapes
+        rectangle.printDescription();
+        System.out.println("Area of the rectangle: " + rectangle.area());
+
+        circle.printDescription();
+        System.out.println("Area of the circle: " + circle.area());
+    }
+}
+
+//Nested Class
+// PolymorphismDemo.java
+
+// Base class
+class Animal {
+    // Method to be overridden
+    public void makeSound() {
+        System.out.println("Some sound...");
+    }
+    
+    // Method overload
+    public void eat() {
+        System.out.println("Animal is eating.");
+    }
+    
+    public void eat(String food) {
+        System.out.println("Animal is eating " + food + ".");
+    }
+}
+
+// Derived class
+class Dog extends Animal {
+    // Overriding the makeSound method
+    @Override
+    public void makeSound() {
+        System.out.println("Woof Woof");
+    }
+}
+
+// Another derived class
+class Cat extends Animal {
+    // Overriding the makeSound method
+    @Override
+    public void makeSound() {
+        System.out.println("Meow Meow");
+    }
+}
+
+// Main class to demonstrate polymorphism
+public class PolymorphismDemo {
+    public static void main(String[] args) {
+        // Create instances of Animal, Dog, and Cat
+        Animal myAnimal = new Animal();
+        Animal myDog = new Dog();
+        Animal myCat = new Cat();
+
+        // Call the makeSound method (method overriding)
+        myAnimal.makeSound();  // Outputs: Some sound...
+        myDog.makeSound();     // Outputs: Woof Woof
+        myCat.makeSound();     // Outputs: Meow Meow
+
+        // Call the overloaded eat method
+        myAnimal.eat();            // Outputs: Animal is eating.
+        myAnimal.eat("meat");      // Outputs: Animal is eating meat.
+        myDog.eat();               // Outputs: Animal is eating.
+        myDog.eat("bone");        // Outputs: Animal is eating bone.
+    }
+}
+//Inheritance
+// InheritanceDemo.java
+
+// Base class (Parent class)
+class Animal {
+    // Field of the Animal class
+    String name;
+
+    // Constructor of the Animal class
+    public Animal(String name) {
+        this.name = name;
+    }
+
+    // Method of the Animal class
+    public void eat() {
+        System.out.println(name + " is eating.");
+    }
+
+    // Method of the Animal class
+    public void sleep() {
+        System.out.println(name + " is sleeping.");
+    }
+}
+
+// Derived class (Child class) extending Animal
+class Dog extends Animal {
+    // Field of the Dog class
+    String breed;
+
+    // Constructor of the Dog class
+    public Dog(String name, String breed) {
+        // Call the constructor of the Animal class
+        super(name);
+        this.breed = breed;
+    }
+
+    // Method specific to Dog class
+    public void bark() {
+        System.out.println(name + " is barking.");
+    }
+
+    // Override the sleep method
+    @Override
+    public void sleep() {
+        System.out.println(name + " is sleeping in a cozy dog bed.");
+    }
+}
+
+// Main class to demonstrate inheritance
+public class InheritanceDemo {
+    public static void main(String[] args) {
+        // Create an instance of Animal
+        Animal animal = new Animal("Generic Animal");
+        animal.eat();
+        animal.sleep();
+
+        // Create an instance of Dog
+        Dog dog = new Dog("Buddy", "Golden Retriever");
+        dog.eat();
+        dog.sleep();  // Calls the overridden method
+        dog.bark();
+    }
+}
+
+public class inheritance {
+
+}
+//Abstraction
+
+
+// Abstract class
+abstract class Animal {
+    // Abstract method (does not have a body)
+    public abstract void makeSound();
+
+    // Concrete method
+    public void sleep() {
+        System.out.println("This animal is sleeping.");
+    }
+}
+
+// Concrete class extending abstract class
+class Dog extends Animal {
+    // Providing implementation of the abstract method
+    @Override
+    public void makeSound() {
+        System.out.println("Woof Woof");
+    }
+}
+
+// Interface
+interface Swimmer {
+    // Abstract method
+    void swim();
+}
+
+// Concrete class implementing interface
+class Fish implements Swimmer {
+    // Providing implementation of the abstract method
+    @Override
+    public void swim() {
+        System.out.println("The fish is swimming.");
+    }
+}
+
+// Main class to demonstrate abstraction
+public class AbstractionDemo {
+    public static void main(String[] args) {
+        // Create an instance of Dog
+        Animal dog = new Dog();
+        dog.makeSound(); // Calls the overridden method
+        dog.sleep();     // Calls the regular method
+
+        // Create an instance of Fish
+        Swimmer fish = new Fish();
+        fish.swim();     // Calls the implemented method
+    }
+}
+
+//Polymorphisam
+// PolymorphismDemo.java
+
+// Base class
+class Animal {
+    // Method to be overridden
+    public void makeSound() {
+        System.out.println("Some sound...");
+    }
+    
+    // Method overload
+    public void eat() {
+        System.out.println("Animal is eating.");
+    }
+    
+    public void eat(String food) {
+        System.out.println("Animal is eating " + food + ".");
+    }
+}
+
+// Derived class
+class Dog extends Animal {
+    // Overriding the makeSound method
+    @Override
+    public void makeSound() {
+        System.out.println("Woof Woof");
+    }
+}
+
+// Another derived class
+class Cat extends Animal {
+    // Overriding the makeSound method
+    @Override
+    public void makeSound() {
+        System.out.println("Meow Meow");
+    }
+}
+
+// Main class to demonstrate polymorphism
+public class PolymorphismDemo {
+    public static void main(String[] args) {
+        // Create instances of Animal, Dog, and Cat
+        Animal myAnimal = new Animal();
+        Animal myDog = new Dog();
+        Animal myCat = new Cat();
+
+        // Call the makeSound method (method overriding)
+        myAnimal.makeSound();  // Outputs: Some sound...
+        myDog.makeSound();     // Outputs: Woof Woof
+        myCat.makeSound();     // Outputs: Meow Meow
+
+        // Call the overloaded eat method
+        myAnimal.eat();            // Outputs: Animal is eating.
+        myAnimal.eat("meat");      // Outputs: Animal is eating meat.
+        myDog.eat();               // Outputs: Animal is eating.
+        myDog.eat("bone");        // Outputs: Animal is eating bone.
+    }
+}
+
+//Encapsulation
+
+// Class demonstrating encapsulation
+public class Person {
+    // Private fields (encapsulated data)
+    private String name;
+    private int age;
+
+    // Public constructor to initialize the Person object
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    // Public getter method for name
+    public String getName() {
+        return name;
+    }
+
+    // Public setter method for name
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    // Public getter method for age
+    public int getAge() {
+        return age;
+    }
+
+    // Public setter method for age
+    public void setAge(int age) {
+        if (age > 0) { // Basic validation to ensure age is positive
+            this.age = age;
+        } else {
+            System.out.println("Age must be positive.");
+        }
+    }
+
+    // Method to display person details
+    public void displayInfo() {
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+    }
+}
+
+// Main class to demonstrate encapsulation
+public class EncapsulationDemo {
+    public static void main(String[] args) {
+        // Create an instance of Person
+        Person person = new Person("John Doe", 30);
+
+        // Display initial information
+        person.displayInfo();
+
+        // Modify person details using setter methods
+        person.setName("Jane Doe");
+        person.setAge(25);
+
+        // Display updated information
+        person.displayInfo();
+
+        // Attempt to set an invalid age
+        person.setAge(-5);
+    }
+}
+
+public class Encapsulation {
+
+}
+
